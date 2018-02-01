@@ -1,0 +1,14 @@
+{% block body %}
+<form action="/login" method="POST">
+  <input type="username" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Log in">
+
+</form>
+
+<form action="/domain" method="POST">
+  <input type="domain" name="domain" placeholder="domain.org">
+  <input type="submit" name="submit" value="Test Connection">
+  <input type="submit" name="submit" value="Register Domain">
+</form>
+{% endblock %}
