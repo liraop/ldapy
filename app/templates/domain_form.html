@@ -1,0 +1,15 @@
+<!doctype html>
+{% extends "index.html" %}
+{% block body %}
+<form action="/domain" method="POST">
+  <select class="form-control" id="domainType" name="domainType">
+      <option value="AD">AD</option>
+      <option value="LDAP">LDAP</option>
+  </select>
+  <input type="username" name="user" placeholder="Bind User Login">
+  <input type="password" name="pass" placeholder="Bind User Password">
+  <input type="domain" name="domain" placeholder="doain.org">
+  <input type="submit" name="submit" value="Test Connection">
+  <input type="submit" name="submit" value="Register Domain">
+</form>
+{% endblock %}
