@@ -46,3 +46,10 @@ class Domain(object):
     @kind.setter
     def kind(self, impl):
         self._kind = impl
+
+    def toJSON(self):
+        return { "url" : self.url,
+                "bind_user": self.bind_user,
+                "bind_pw": self.bind_pw,
+                "kind": self.kind
+                }
