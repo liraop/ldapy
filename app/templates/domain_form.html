@@ -1,15 +1,20 @@
 <!doctype html>
-{% extends "index.html" %}
-{% block body %}
+{% extends "layout.html" %}
+{% block header %}<h1>Domain connection</h1> {% endblock %}
+{% block content %}
 <form action="/domain" method="POST">
-  <select class="form-control" id="domainType" name="domainType">
-      <option value="AD">AD</option>
-      <option value="LDAP">LDAP</option>
-  </select>
+ <class="radio">
+  <label>
+    <input type="radio" name="domainType" value="AD">AD
+  </label>
+  <label>
+    <input type="radio" name="domainType" value="LDAP">LDAP
+  </label>
+</class>
   <input type="username" name="user" placeholder="Bind User Login">
   <input type="password" name="pass" placeholder="Bind User Password">
-  <input type="domain" name="domain" placeholder="doain.org">
-  <input type="submit" name="submit" value="Test Connection">
-  <input type="submit" name="submit" value="Register Domain">
+  <input type="domain" name="domain" placeholder="domain.org">
+  <input type="submit" name="testCon" value="Test Connection">
+  <input type="submit" name="regDom" value="Register Domain">
 </form>
 {% endblock %}
